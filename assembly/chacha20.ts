@@ -95,7 +95,6 @@ function core(out: usize, input: usize, key: usize): void {
   const j1: i32 = 857760878; // 0x3320646e; // "nd 3"     for 32-byte keys
   const j2: i32 = 2036477234; // 0x79622d32; // "2-by"
   const j3: i32 = 1797285236; // 0x6b206574; // "te k"
-  // TODO: is this cpu byte order dependent?
   // const j4: i32 = (i32(load8(key, 3)) << 24) | (i32(load8(key, 2)) << 16) | (i32(load8(key, 1)) << 8) | i32(load8(key, 0));
   const j4 = (i32(load32(key, 0)))
   // const j5: i32 = (i32(load8(key, 7)) << 24) | (i32(load8(key, 6)) << 16) | (i32(load8(key, 5)) << 8) | i32(load8(key, 4));

@@ -450,323 +450,71 @@
   i32.const 1797285236
   local.set $4
   local.get $2
-  i32.load8_u
-  local.get $2
-  i32.const 3
-  i32.add
-  i32.load8_u
-  i32.const 24
-  i32.shl
-  local.get $2
-  i32.const 2
-  i32.add
-  i32.load8_u
-  i32.const 16
-  i32.shl
-  i32.or
-  local.get $2
-  i32.const 1
-  i32.add
-  i32.load8_u
-  i32.const 8
-  i32.shl
-  i32.or
-  i32.or
+  i32.load
   local.tee $19
   local.set $3
   local.get $2
   i32.const 4
   i32.add
-  i32.load8_u
-  local.get $2
-  i32.const 7
-  i32.add
-  i32.load8_u
-  i32.const 24
-  i32.shl
-  local.get $2
-  i32.const 6
-  i32.add
-  i32.load8_u
-  i32.const 16
-  i32.shl
-  i32.or
-  local.get $2
-  i32.const 5
-  i32.add
-  i32.load8_u
-  i32.const 8
-  i32.shl
-  i32.or
-  i32.or
+  i32.load
   local.tee $20
   local.set $5
   local.get $2
   i32.const 8
   i32.add
-  i32.load8_u
-  local.get $2
-  i32.const 11
-  i32.add
-  i32.load8_u
-  i32.const 24
-  i32.shl
-  local.get $2
-  i32.const 10
-  i32.add
-  i32.load8_u
-  i32.const 16
-  i32.shl
-  i32.or
-  local.get $2
-  i32.const 9
-  i32.add
-  i32.load8_u
-  i32.const 8
-  i32.shl
-  i32.or
-  i32.or
+  i32.load
   local.tee $21
   local.set $6
   local.get $2
   i32.const 12
   i32.add
-  i32.load8_u
-  local.get $2
-  i32.const 15
-  i32.add
-  i32.load8_u
-  i32.const 24
-  i32.shl
-  local.get $2
-  i32.const 14
-  i32.add
-  i32.load8_u
-  i32.const 16
-  i32.shl
-  i32.or
-  local.get $2
-  i32.const 13
-  i32.add
-  i32.load8_u
-  i32.const 8
-  i32.shl
-  i32.or
-  i32.or
+  i32.load
   local.tee $22
   local.set $11
   local.get $2
   i32.const 16
   i32.add
-  i32.load8_u
-  local.get $2
-  i32.const 19
-  i32.add
-  i32.load8_u
-  i32.const 24
-  i32.shl
-  local.get $2
-  i32.const 18
-  i32.add
-  i32.load8_u
-  i32.const 16
-  i32.shl
-  i32.or
-  local.get $2
-  i32.const 17
-  i32.add
-  i32.load8_u
-  i32.const 8
-  i32.shl
-  i32.or
-  i32.or
+  i32.load
   local.tee $23
   local.set $13
   local.get $2
   i32.const 20
   i32.add
-  i32.load8_u
-  local.get $2
-  i32.const 23
-  i32.add
-  i32.load8_u
-  i32.const 24
-  i32.shl
-  local.get $2
-  i32.const 22
-  i32.add
-  i32.load8_u
-  i32.const 16
-  i32.shl
-  i32.or
-  local.get $2
-  i32.const 21
-  i32.add
-  i32.load8_u
-  i32.const 8
-  i32.shl
-  i32.or
-  i32.or
+  i32.load
   local.tee $24
   local.set $9
   local.get $2
   i32.const 24
   i32.add
-  i32.load8_u
-  local.get $2
-  i32.const 27
-  i32.add
-  i32.load8_u
-  i32.const 24
-  i32.shl
-  local.get $2
-  i32.const 26
-  i32.add
-  i32.load8_u
-  i32.const 16
-  i32.shl
-  i32.or
-  local.get $2
-  i32.const 25
-  i32.add
-  i32.load8_u
-  i32.const 8
-  i32.shl
-  i32.or
-  i32.or
+  i32.load
   local.tee $25
   local.set $14
   local.get $2
   i32.const 28
   i32.add
-  i32.load8_u
-  local.get $2
-  i32.const 31
-  i32.add
-  i32.load8_u
-  i32.const 24
-  i32.shl
-  local.get $2
-  i32.const 30
-  i32.add
-  i32.load8_u
-  i32.const 16
-  i32.shl
-  i32.or
-  local.get $2
-  i32.const 29
-  i32.add
-  i32.load8_u
-  i32.const 8
-  i32.shl
-  i32.or
-  i32.or
+  i32.load
   local.tee $26
   local.set $2
   local.get $1
-  i32.load8_u
-  local.get $1
-  i32.const 3
-  i32.add
-  i32.load8_u
-  i32.const 24
-  i32.shl
-  local.get $1
-  i32.const 2
-  i32.add
-  i32.load8_u
-  i32.const 16
-  i32.shl
-  i32.or
-  local.get $1
-  i32.const 1
-  i32.add
-  i32.load8_u
-  i32.const 8
-  i32.shl
-  i32.or
-  i32.or
+  i32.load
   local.tee $27
   local.set $15
   local.get $1
   i32.const 4
   i32.add
-  i32.load8_u
-  local.get $1
-  i32.const 7
-  i32.add
-  i32.load8_u
-  i32.const 24
-  i32.shl
-  local.get $1
-  i32.const 6
-  i32.add
-  i32.load8_u
-  i32.const 16
-  i32.shl
-  i32.or
-  local.get $1
-  i32.const 5
-  i32.add
-  i32.load8_u
-  i32.const 8
-  i32.shl
-  i32.or
-  i32.or
+  i32.load
   local.tee $28
   local.set $16
   local.get $1
   i32.const 8
   i32.add
-  i32.load8_u
-  local.get $1
-  i32.const 11
-  i32.add
-  i32.load8_u
-  i32.const 24
-  i32.shl
-  local.get $1
-  i32.const 10
-  i32.add
-  i32.load8_u
-  i32.const 16
-  i32.shl
-  i32.or
-  local.get $1
-  i32.const 9
-  i32.add
-  i32.load8_u
-  i32.const 8
-  i32.shl
-  i32.or
-  i32.or
+  i32.load
   local.tee $29
   local.set $10
   local.get $1
   i32.const 12
   i32.add
-  i32.load8_u
-  local.get $1
-  i32.const 15
-  i32.add
-  i32.load8_u
-  i32.const 24
-  i32.shl
-  local.get $1
-  i32.const 14
-  i32.add
-  i32.load8_u
-  i32.const 16
-  i32.shl
-  i32.or
-  local.get $1
-  i32.const 13
-  i32.add
-  i32.load8_u
-  i32.const 8
-  i32.shl
-  i32.or
-  i32.or
+  i32.load
   local.tee $30
   local.set $1
   loop $for-loop|0
@@ -1353,7 +1101,7 @@
   if
    i32.const 144
    i32.const 208
-   i32.const 261
+   i32.const 274
    i32.const 4
    call $~lib/builtins/abort
    unreachable

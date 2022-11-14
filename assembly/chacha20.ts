@@ -1,5 +1,5 @@
 import { DATA_CHUNK_LENGTH, KEY_LENGTH } from "../common/const";
-import {load8, store8, wipe8, writeUint32LE} from "./util";
+import {load32, load8, store8, wipe8, writeUint32LE} from "./util";
 
 export const CHACHA20_INPUT_LENGTH = DATA_CHUNK_LENGTH;
 // See stablelib
@@ -95,18 +95,31 @@ function core(out: usize, input: usize, key: usize): void {
   const j1: i32 = 857760878; // 0x3320646e; // "nd 3"     for 32-byte keys
   const j2: i32 = 2036477234; // 0x79622d32; // "2-by"
   const j3: i32 = 1797285236; // 0x6b206574; // "te k"
-  const j4: i32 = (i32(load8(key, 3)) << 24) | (i32(load8(key, 2)) << 16) | (i32(load8(key, 1)) << 8) | i32(load8(key, 0));
-  const j5: i32 = (i32(load8(key, 7)) << 24) | (i32(load8(key, 6)) << 16) | (i32(load8(key, 5)) << 8) | i32(load8(key, 4));
-  const j6: i32 = (i32(load8(key, 11)) << 24) | (i32(load8(key, 10)) << 16) | (i32(load8(key, 9)) << 8) | i32(load8(key, 8));
-  const j7: i32 = (i32(load8(key, 15)) << 24) | (i32(load8(key, 14)) << 16) | (i32(load8(key, 13)) << 8) | i32(load8(key, 12));
-  const j8: i32 = (i32(load8(key, 19)) << 24) | (i32(load8(key, 18)) << 16) | (i32(load8(key, 17)) << 8) | i32(load8(key, 16));
-  const j9: i32 = (i32(load8(key, 23)) << 24) | (i32(load8(key, 22)) << 16) | (i32(load8(key, 21)) << 8) | i32(load8(key, 20));
-  const j10: i32 = (i32(load8(key, 27)) << 24) | (i32(load8(key, 26)) << 16) | (i32(load8(key, 25)) << 8) | i32(load8(key, 24));
-  const j11: i32 = (i32(load8(key, 31)) << 24) | (i32(load8(key, 30)) << 16) | (i32(load8(key, 29)) << 8) | i32(load8(key, 28));
-  const j12: i32 = (i32(load8(input, 3)) << 24) | (i32(load8(input, 2)) << 16) | (i32(load8(input, 1)) << 8) | i32(load8(input, 0));
-  const j13: i32 = (i32(load8(input, 7)) << 24) | (i32(load8(input, 6)) << 16) | (i32(load8(input, 5)) << 8) | i32(load8(input, 4));
-  const j14: i32 = (i32(load8(input, 11)) << 24) | (i32(load8(input, 10)) << 16) | (i32(load8(input, 9)) << 8) | i32(load8(input, 8));
-  const j15: i32 = (i32(load8(input, 15)) << 24) | (i32(load8(input, 14)) << 16) | (i32(load8(input, 13)) << 8) | i32(load8(input, 12));
+  // TODO: is this cpu byte order dependent?
+  // const j4: i32 = (i32(load8(key, 3)) << 24) | (i32(load8(key, 2)) << 16) | (i32(load8(key, 1)) << 8) | i32(load8(key, 0));
+  const j4 = (i32(load32(key, 0)))
+  // const j5: i32 = (i32(load8(key, 7)) << 24) | (i32(load8(key, 6)) << 16) | (i32(load8(key, 5)) << 8) | i32(load8(key, 4));
+  const j5 = (i32(load32(key, 1)))
+  // const j6: i32 = (i32(load8(key, 11)) << 24) | (i32(load8(key, 10)) << 16) | (i32(load8(key, 9)) << 8) | i32(load8(key, 8));
+  const j6 = (i32(load32(key, 2)))
+  // const j7: i32 = (i32(load8(key, 15)) << 24) | (i32(load8(key, 14)) << 16) | (i32(load8(key, 13)) << 8) | i32(load8(key, 12));
+  const j7 = (i32(load32(key, 3)))
+  // const j8: i32 = (i32(load8(key, 19)) << 24) | (i32(load8(key, 18)) << 16) | (i32(load8(key, 17)) << 8) | i32(load8(key, 16));
+  const j8 = (i32(load32(key, 4)))
+  // const j9: i32 = (i32(load8(key, 23)) << 24) | (i32(load8(key, 22)) << 16) | (i32(load8(key, 21)) << 8) | i32(load8(key, 20));
+  const j9 = (i32(load32(key, 5)))
+  // const j10: i32 = (i32(load8(key, 27)) << 24) | (i32(load8(key, 26)) << 16) | (i32(load8(key, 25)) << 8) | i32(load8(key, 24));
+  const j10 = (i32(load32(key, 6)))
+  // const j11: i32 = (i32(load8(key, 31)) << 24) | (i32(load8(key, 30)) << 16) | (i32(load8(key, 29)) << 8) | i32(load8(key, 28));
+  const j11 = (i32(load32(key, 7)))
+  // const j12: i32 = (i32(load8(input, 3)) << 24) | (i32(load8(input, 2)) << 16) | (i32(load8(input, 1)) << 8) | i32(load8(input, 0));
+  const j12 = (i32(load32(input, 0)))
+  // const j13: i32 = (i32(load8(input, 7)) << 24) | (i32(load8(input, 6)) << 16) | (i32(load8(input, 5)) << 8) | i32(load8(input, 4));
+  const j13 = (i32(load32(input, 1)))
+  // const j14: i32 = (i32(load8(input, 11)) << 24) | (i32(load8(input, 10)) << 16) | (i32(load8(input, 9)) << 8) | i32(load8(input, 8));
+  const j14 = (i32(load32(input, 2)))
+  // const j15: i32 = (i32(load8(input, 15)) << 24) | (i32(load8(input, 14)) << 16) | (i32(load8(input, 13)) << 8) | i32(load8(input, 12));
+  const j15 = (i32(load32(input, 3)))
 
   let x0: i32 = j0;
   let x1: i32 = j1;

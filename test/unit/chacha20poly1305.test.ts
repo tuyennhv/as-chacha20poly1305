@@ -46,7 +46,10 @@ describe("chacha20poly1305", function () {
         expect(plainText1).to.be.deep.equal(plainText);
         // decode by as impl
         const plainText2 = asImpl.open(key, nonce, sealed, ad, sealed.subarray(0, sealed.length - TAG_LENGTH));
-        expect(plainText2).to.be.deep.equal(plainText, "decoded data from assemblyscript is not correct");
+        expect (plainText2).to.be.not.null;
+        if (plainText2) {
+          expect(Buffer.from(plainText2).toString("hex")).to.be.deep.equal(Buffer.from(plainText).toString("hex"), "decoded data from assemblyscript is not correct");
+        }
       });
     }
   }

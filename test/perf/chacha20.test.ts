@@ -3,7 +3,7 @@ import crypto from "crypto";
 import {streamXOR as streamXORStableLib} from "@stablelib/chacha";
 import {chacha20StreamXOR} from "../../src/chacha20";
 
-describe("streamXOR assemblyscript vs javascript", function () {
+describe("chacha20 (streamXOR) assemblyscript vs javascript", function () {
   this.timeout(0);
   const inputLengths = [512, 1204, 4096, 16384];
 
@@ -21,7 +21,6 @@ describe("streamXOR assemblyscript vs javascript", function () {
       fn: ({key: k, nonce: n, input: i}) => {
         streamXORStableLib(k, n, i, dest, nonceInplaceCounterLength);
       },
-      runsFactor: 1000,
     });
 
     itBench({
@@ -31,7 +30,6 @@ describe("streamXOR assemblyscript vs javascript", function () {
       fn: ({key: k, nonce: n, input: i}) => {
         chacha20StreamXOR(k, n, i);
       },
-      runsFactor: 1000,
     });
   }
 });

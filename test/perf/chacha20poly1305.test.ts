@@ -28,7 +28,6 @@ describe("chacha20poly1305", function () {
       fn: () => {
         asImpl.seal(key, nonce, plainText, ad);
       },
-      runsFactor: 1000,
     });
 
     itBench({
@@ -36,7 +35,6 @@ describe("chacha20poly1305", function () {
       fn: () => {
         jsImpl.seal(nonce, plainText, ad);
       },
-      runsFactor: 1000,
     });
 
     itBench({
@@ -46,7 +44,6 @@ describe("chacha20poly1305", function () {
         // overwriteSealed as true to avoid memory allocation
         asImpl.open(key, nonce, clonedSealed, ad, clonedSealed.subarray(0, clonedSealed.length - TAG_LENGTH));
       },
-      runsFactor: 1000,
     });
 
     itBench({
@@ -55,7 +52,6 @@ describe("chacha20poly1305", function () {
       fn: (clonedSealed) => {
         jsImpl.open(nonce, clonedSealed, ad, clonedSealed.subarray(0, clonedSealed.length - TAG_LENGTH));
       },
-      runsFactor: 1000,
     });
   }
 });

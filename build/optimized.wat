@@ -442,41 +442,41 @@
   (local $32 i32)
   (local $33 i32)
   i32.const 1634760805
-  local.set $12
+  local.set $5
   i32.const 857760878
-  local.set $7
+  local.set $6
   i32.const 2036477234
-  local.set $8
+  local.set $14
   i32.const 1797285236
-  local.set $4
+  local.set $7
   local.get $2
   i32.load
   local.tee $19
-  local.set $3
+  local.set $4
   local.get $2
   i32.const 4
   i32.add
   i32.load
   local.tee $20
-  local.set $5
+  local.set $8
   local.get $2
   i32.const 8
   i32.add
   i32.load
   local.tee $21
-  local.set $6
+  local.set $3
   local.get $2
   i32.const 12
   i32.add
   i32.load
   local.tee $22
-  local.set $11
+  local.set $13
   local.get $2
   i32.const 16
   i32.add
   i32.load
   local.tee $23
-  local.set $13
+  local.set $15
   local.get $2
   i32.const 20
   i32.add
@@ -488,7 +488,7 @@
   i32.add
   i32.load
   local.tee $25
-  local.set $14
+  local.set $10
   local.get $2
   i32.const 28
   i32.add
@@ -498,7 +498,7 @@
   local.get $1
   i32.load
   local.tee $27
-  local.set $15
+  local.set $11
   local.get $1
   i32.const 4
   i32.add
@@ -510,7 +510,7 @@
   i32.add
   i32.load
   local.tee $29
-  local.set $10
+  local.set $12
   local.get $1
   i32.const 12
   i32.add
@@ -522,432 +522,275 @@
    i32.const 20
    i32.lt_s
    if
-    local.get $6
+    local.get $3
+    local.get $10
+    local.get $12
+    local.get $3
     local.get $14
-    local.get $10
-    local.get $6
-    local.get $8
     i32.add
-    local.tee $6
+    local.tee $3
     i32.xor
-    local.tee $8
     i32.const 16
-    i32.shr_u
-    local.get $8
-    i32.const 16
-    i32.shl
-    i32.or
-    local.tee $8
-    i32.add
-    local.tee $14
-    i32.xor
-    local.tee $10
-    i32.const 20
-    i32.shr_u
-    local.get $10
-    i32.const 12
-    i32.shl
-    i32.or
-    local.tee $10
-    local.get $14
-    local.get $8
-    local.get $6
-    local.get $10
-    i32.add
-    local.tee $8
-    i32.xor
-    local.tee $6
-    i32.const 24
-    i32.shr_u
-    local.get $6
-    i32.const 8
-    i32.shl
-    i32.or
+    i32.rotl
     local.tee $14
     i32.add
     local.tee $10
     i32.xor
-    local.set $6
-    local.get $11
-    local.get $2
-    local.get $1
-    local.get $4
-    local.get $11
-    i32.add
-    local.tee $1
-    i32.xor
-    local.tee $2
-    i32.const 16
-    i32.shr_u
-    local.get $2
-    i32.const 16
-    i32.shl
-    i32.or
-    local.tee $2
-    i32.add
-    local.tee $11
-    i32.xor
-    local.tee $4
-    i32.const 20
-    i32.shr_u
-    local.get $4
     i32.const 12
-    i32.shl
-    i32.or
-    local.tee $4
-    local.get $11
+    i32.rotl
+    local.tee $12
+    local.get $10
+    local.get $14
+    local.get $3
+    local.get $12
+    i32.add
+    local.tee $3
+    i32.xor
+    i32.const 8
+    i32.rotl
+    local.tee $14
+    i32.add
+    local.tee $10
+    i32.xor
+    local.set $12
+    local.get $13
     local.get $2
     local.get $1
-    local.get $4
+    local.get $7
+    local.get $13
     i32.add
-    local.tee $11
-    i32.xor
     local.tee $1
-    i32.const 24
-    i32.shr_u
+    i32.xor
+    i32.const 16
+    i32.rotl
+    local.tee $2
+    i32.add
+    local.tee $13
+    i32.xor
+    i32.const 12
+    i32.rotl
+    local.tee $7
+    local.get $13
+    local.get $2
     local.get $1
+    local.get $7
+    i32.add
+    local.tee $13
+    i32.xor
     i32.const 8
-    i32.shl
-    i32.or
+    i32.rotl
+    local.tee $1
+    i32.add
+    local.tee $2
+    i32.xor
+    local.set $7
+    local.get $4
+    local.get $15
+    local.get $11
+    local.get $4
+    local.get $5
+    i32.add
     local.tee $4
+    i32.xor
+    i32.const 16
+    i32.rotl
+    local.tee $5
+    i32.add
+    local.tee $15
+    i32.xor
+    i32.const 12
+    i32.rotl
+    local.tee $11
+    local.get $15
+    local.get $5
+    local.get $4
+    local.get $11
+    i32.add
+    local.tee $4
+    i32.xor
+    i32.const 8
+    i32.rotl
+    local.tee $5
+    i32.add
+    local.tee $15
+    i32.xor
+    local.set $11
+    local.get $10
+    local.get $1
+    local.get $8
+    local.get $9
+    local.get $16
+    local.get $6
+    local.get $8
+    i32.add
+    local.tee $1
+    i32.xor
+    i32.const 16
+    i32.rotl
+    local.tee $8
+    i32.add
+    local.tee $6
+    i32.xor
+    i32.const 12
+    i32.rotl
+    local.tee $9
+    local.get $6
+    local.get $8
+    local.get $1
+    local.get $9
+    i32.add
+    local.tee $1
+    i32.xor
+    i32.const 8
+    i32.rotl
+    local.tee $6
+    i32.add
+    local.tee $9
+    i32.xor
+    i32.const 7
+    i32.rotl
+    local.tee $10
+    local.get $4
     i32.add
     local.tee $17
     i32.xor
-    local.set $1
-    local.get $3
-    local.get $13
-    local.get $15
-    local.get $3
-    local.get $12
-    i32.add
-    local.tee $2
-    i32.xor
-    local.tee $3
     i32.const 16
-    i32.shr_u
-    local.get $3
-    i32.const 16
-    i32.shl
-    i32.or
-    local.tee $3
-    i32.add
-    local.tee $12
-    i32.xor
-    local.tee $13
-    i32.const 20
-    i32.shr_u
-    local.get $13
-    i32.const 12
-    i32.shl
-    i32.or
-    local.tee $13
-    local.get $12
-    local.get $3
-    local.get $2
-    local.get $13
-    i32.add
-    local.tee $3
-    i32.xor
-    local.tee $2
-    i32.const 24
-    i32.shr_u
-    local.get $2
-    i32.const 8
-    i32.shl
-    i32.or
-    local.tee $12
-    i32.add
-    local.tee $13
-    i32.xor
-    local.set $2
-    local.get $10
-    local.get $4
-    local.get $5
-    local.get $9
-    local.get $16
-    local.get $5
-    local.get $7
-    i32.add
-    local.tee $5
-    i32.xor
-    local.tee $7
-    i32.const 16
-    i32.shr_u
-    local.get $7
-    i32.const 16
-    i32.shl
-    i32.or
-    local.tee $7
-    i32.add
-    local.tee $4
-    i32.xor
-    local.tee $9
-    i32.const 20
-    i32.shr_u
-    local.get $9
-    i32.const 12
-    i32.shl
-    i32.or
-    local.tee $9
-    local.get $4
-    local.get $7
-    local.get $5
-    local.get $9
-    i32.add
-    local.tee $7
-    i32.xor
-    local.tee $5
-    i32.const 24
-    i32.shr_u
-    local.get $5
-    i32.const 8
-    i32.shl
-    i32.or
-    local.tee $4
-    i32.add
-    local.tee $9
-    i32.xor
-    local.tee $5
-    i32.const 25
-    i32.shr_u
-    local.get $5
-    i32.const 7
-    i32.shl
-    i32.or
+    i32.rotl
     local.tee $31
-    local.get $3
+    i32.add
+    local.set $8
+    local.get $2
+    local.get $5
+    local.get $12
+    i32.const 7
+    i32.rotl
+    local.tee $5
+    local.get $1
     i32.add
     local.tee $32
     i32.xor
-    local.tee $3
     i32.const 16
-    i32.shr_u
-    local.get $3
-    i32.const 16
-    i32.shl
-    i32.or
+    i32.rotl
     local.tee $33
     i32.add
-    local.set $5
-    local.get $17
-    local.get $12
-    local.get $6
-    i32.const 7
-    i32.shl
-    local.get $6
-    i32.const 25
-    i32.shr_u
-    i32.or
-    local.tee $12
-    local.get $7
-    i32.add
-    local.tee $7
-    i32.xor
-    local.tee $3
-    i32.const 16
-    i32.shr_u
-    local.get $3
-    i32.const 16
-    i32.shl
-    i32.or
-    local.tee $15
-    i32.add
-    local.set $6
+    local.set $1
     local.get $9
     local.get $14
+    local.get $13
     local.get $11
-    local.get $2
     i32.const 7
-    i32.shl
-    local.get $2
-    i32.const 25
-    i32.shr_u
-    i32.or
+    i32.rotl
     local.tee $9
     i32.add
-    local.tee $14
-    i32.xor
-    local.tee $2
-    i32.const 16
-    i32.shr_u
-    local.get $2
-    i32.const 16
-    i32.shl
-    i32.or
-    local.tee $10
-    i32.add
-    local.set $2
-    local.get $13
-    local.get $4
-    local.get $8
-    local.get $1
-    i32.const 7
-    i32.shl
-    local.get $1
-    i32.const 25
-    i32.shr_u
-    i32.or
-    local.tee $3
-    i32.add
-    local.tee $8
-    i32.xor
-    local.tee $1
-    i32.const 16
-    i32.shr_u
-    local.get $1
-    i32.const 16
-    i32.shl
-    i32.or
-    local.tee $4
-    i32.add
-    local.tee $1
-    local.get $8
-    local.get $1
-    local.get $3
-    i32.xor
-    local.tee $3
-    i32.const 20
-    i32.shr_u
-    local.get $3
-    i32.const 12
-    i32.shl
-    i32.or
-    local.tee $3
-    i32.add
-    local.tee $8
-    local.get $4
-    i32.xor
     local.tee $11
-    i32.const 24
-    i32.shr_u
-    local.get $11
+    i32.xor
+    i32.const 16
+    i32.rotl
+    local.tee $12
+    i32.add
+    local.set $4
+    local.get $15
+    local.get $6
+    local.get $3
+    local.get $7
+    i32.const 7
+    i32.rotl
+    local.tee $3
+    i32.add
+    local.tee $6
+    i32.xor
+    i32.const 16
+    i32.rotl
+    local.tee $7
+    i32.add
+    local.tee $2
+    local.get $6
+    local.get $2
+    local.get $3
+    i32.xor
+    i32.const 12
+    i32.rotl
+    local.tee $3
+    i32.add
+    local.tee $14
+    local.get $7
+    i32.xor
     i32.const 8
-    i32.shl
-    i32.or
+    i32.rotl
     local.tee $16
     i32.add
-    local.tee $13
+    local.tee $15
     local.get $3
     i32.xor
-    local.tee $1
-    i32.const 25
-    i32.shr_u
-    local.get $1
     i32.const 7
-    i32.shl
-    i32.or
-    local.set $11
-    local.get $14
-    local.get $2
+    i32.rotl
+    local.set $13
+    local.get $11
+    local.get $4
     local.get $9
     i32.xor
-    local.tee $1
-    i32.const 20
-    i32.shr_u
-    local.get $1
     i32.const 12
-    i32.shl
-    i32.or
-    local.tee $1
-    i32.add
-    local.tee $4
-    local.get $10
-    i32.xor
-    local.tee $3
-    i32.const 24
-    i32.shr_u
-    local.get $3
-    i32.const 8
-    i32.shl
-    i32.or
-    local.tee $10
-    local.get $2
-    i32.add
-    local.tee $9
-    local.get $1
-    i32.xor
-    local.tee $1
-    i32.const 25
-    i32.shr_u
-    local.get $1
-    i32.const 7
-    i32.shl
-    i32.or
-    local.set $3
-    local.get $7
-    local.get $6
-    local.get $12
-    i32.xor
-    local.tee $1
-    i32.const 20
-    i32.shr_u
-    local.get $1
-    i32.const 12
-    i32.shl
-    i32.or
-    local.tee $1
+    i32.rotl
+    local.tee $2
     i32.add
     local.tee $7
-    local.get $15
+    local.get $12
     i32.xor
-    local.tee $2
-    i32.const 24
-    i32.shr_u
-    local.get $2
     i32.const 8
-    i32.shl
-    i32.or
-    local.tee $15
-    local.get $6
-    i32.add
-    local.tee $2
-    local.get $1
-    i32.xor
-    local.tee $1
-    i32.const 25
-    i32.shr_u
-    local.get $1
-    i32.const 7
-    i32.shl
-    i32.or
-    local.set $6
-    local.get $32
-    local.get $5
-    local.get $31
-    i32.xor
-    local.tee $1
-    i32.const 20
-    i32.shr_u
-    local.get $1
-    i32.const 12
-    i32.shl
-    i32.or
-    local.tee $17
-    i32.add
+    i32.rotl
     local.tee $12
+    local.get $4
+    i32.add
+    local.tee $9
+    local.get $2
+    i32.xor
+    i32.const 7
+    i32.rotl
+    local.set $4
+    local.get $32
+    local.get $1
+    local.get $5
+    i32.xor
+    i32.const 12
+    i32.rotl
+    local.tee $3
+    i32.add
+    local.tee $6
     local.get $33
     i32.xor
-    local.tee $1
-    i32.const 24
-    i32.shr_u
-    local.get $1
     i32.const 8
-    i32.shl
-    i32.or
-    local.tee $1
-    local.get $5
+    i32.rotl
+    local.tee $11
+    local.get $1
     i32.add
-    local.tee $14
+    local.tee $2
+    local.get $3
+    i32.xor
+    i32.const 7
+    i32.rotl
+    local.set $3
+    local.get $17
+    local.get $8
+    local.get $10
+    i32.xor
+    i32.const 12
+    i32.rotl
+    local.tee $17
+    i32.add
+    local.tee $5
+    local.get $31
+    i32.xor
+    i32.const 8
+    i32.rotl
+    local.tee $1
+    local.get $8
+    i32.add
+    local.tee $10
     local.get $17
     i32.xor
-    local.tee $5
-    i32.const 25
-    i32.shr_u
-    local.get $5
     i32.const 7
-    i32.shl
-    i32.or
-    local.set $5
+    i32.rotl
+    local.set $8
     local.get $18
     i32.const 2
     i32.add
@@ -955,55 +798,55 @@
     br $for-loop|0
    end
   end
-  local.get $12
+  local.get $5
   i32.const 1634760805
   i32.add
   local.get $0
   i32.const 0
   call $assembly/util/writeUint32LE
-  local.get $7
+  local.get $6
   i32.const 857760878
   i32.add
   local.get $0
   i32.const 4
   call $assembly/util/writeUint32LE
-  local.get $8
+  local.get $14
   i32.const 2036477234
   i32.add
   local.get $0
   i32.const 8
   call $assembly/util/writeUint32LE
-  local.get $4
+  local.get $7
   i32.const 1797285236
   i32.add
   local.get $0
   i32.const 12
   call $assembly/util/writeUint32LE
-  local.get $3
+  local.get $4
   local.get $19
   i32.add
   local.get $0
   i32.const 16
   call $assembly/util/writeUint32LE
-  local.get $5
+  local.get $8
   local.get $20
   i32.add
   local.get $0
   i32.const 20
   call $assembly/util/writeUint32LE
-  local.get $6
+  local.get $3
   local.get $21
   i32.add
   local.get $0
   i32.const 24
   call $assembly/util/writeUint32LE
-  local.get $11
+  local.get $13
   local.get $22
   i32.add
   local.get $0
   i32.const 28
   call $assembly/util/writeUint32LE
-  local.get $13
+  local.get $15
   local.get $23
   i32.add
   local.get $0
@@ -1015,7 +858,7 @@
   local.get $0
   i32.const 36
   call $assembly/util/writeUint32LE
-  local.get $14
+  local.get $10
   local.get $25
   i32.add
   local.get $0
@@ -1027,7 +870,7 @@
   local.get $0
   i32.const 44
   call $assembly/util/writeUint32LE
-  local.get $15
+  local.get $11
   local.get $27
   i32.add
   local.get $0
@@ -1039,7 +882,7 @@
   local.get $0
   i32.const 52
   call $assembly/util/writeUint32LE
-  local.get $10
+  local.get $12
   local.get $29
   i32.add
   local.get $0

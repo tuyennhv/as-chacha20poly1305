@@ -1003,642 +1003,386 @@
     local.get $3
     local.get $19
     i32.add
-    i32.const 0
-    i32.or
     local.set $3
     local.get $27
     local.get $3
     i32.xor
     local.set $27
     local.get $27
-    i32.const 32
     i32.const 16
-    i32.sub
-    i32.shr_u
-    local.get $27
-    i32.const 16
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $27
     local.get $23
     local.get $27
     i32.add
-    i32.const 0
-    i32.or
     local.set $23
     local.get $19
     local.get $23
     i32.xor
     local.set $19
     local.get $19
-    i32.const 32
     i32.const 12
-    i32.sub
-    i32.shr_u
-    local.get $19
-    i32.const 12
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $19
     local.get $16
     local.get $20
     i32.add
-    i32.const 0
-    i32.or
     local.set $16
     local.get $28
     local.get $16
     i32.xor
     local.set $28
     local.get $28
-    i32.const 32
     i32.const 16
-    i32.sub
-    i32.shr_u
-    local.get $28
-    i32.const 16
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $28
     local.get $24
     local.get $28
     i32.add
-    i32.const 0
-    i32.or
     local.set $24
     local.get $20
     local.get $24
     i32.xor
     local.set $20
     local.get $20
-    i32.const 32
     i32.const 12
-    i32.sub
-    i32.shr_u
-    local.get $20
-    i32.const 12
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $20
     local.get $17
     local.get $21
     i32.add
-    i32.const 0
-    i32.or
     local.set $17
     local.get $29
     local.get $17
     i32.xor
     local.set $29
     local.get $29
-    i32.const 32
     i32.const 16
-    i32.sub
-    i32.shr_u
-    local.get $29
-    i32.const 16
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $29
     local.get $25
     local.get $29
     i32.add
-    i32.const 0
-    i32.or
     local.set $25
     local.get $21
     local.get $25
     i32.xor
     local.set $21
     local.get $21
-    i32.const 32
     i32.const 12
-    i32.sub
-    i32.shr_u
-    local.get $21
-    i32.const 12
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $21
     local.get $18
     local.get $22
     i32.add
-    i32.const 0
-    i32.or
     local.set $18
     local.get $30
     local.get $18
     i32.xor
     local.set $30
     local.get $30
-    i32.const 32
     i32.const 16
-    i32.sub
-    i32.shr_u
-    local.get $30
-    i32.const 16
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $30
     local.get $26
     local.get $30
     i32.add
-    i32.const 0
-    i32.or
     local.set $26
     local.get $22
     local.get $26
     i32.xor
     local.set $22
     local.get $22
-    i32.const 32
     i32.const 12
-    i32.sub
-    i32.shr_u
-    local.get $22
-    i32.const 12
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $22
     local.get $17
     local.get $21
     i32.add
-    i32.const 0
-    i32.or
     local.set $17
     local.get $29
     local.get $17
     i32.xor
     local.set $29
     local.get $29
-    i32.const 32
     i32.const 8
-    i32.sub
-    i32.shr_u
-    local.get $29
-    i32.const 8
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $29
     local.get $25
     local.get $29
     i32.add
-    i32.const 0
-    i32.or
     local.set $25
     local.get $21
     local.get $25
     i32.xor
     local.set $21
     local.get $21
-    i32.const 32
     i32.const 7
-    i32.sub
-    i32.shr_u
-    local.get $21
-    i32.const 7
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $21
     local.get $18
     local.get $22
     i32.add
-    i32.const 0
-    i32.or
     local.set $18
     local.get $30
     local.get $18
     i32.xor
     local.set $30
     local.get $30
-    i32.const 32
     i32.const 8
-    i32.sub
-    i32.shr_u
-    local.get $30
-    i32.const 8
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $30
     local.get $26
     local.get $30
     i32.add
-    i32.const 0
-    i32.or
     local.set $26
     local.get $22
     local.get $26
     i32.xor
     local.set $22
     local.get $22
-    i32.const 32
     i32.const 7
-    i32.sub
-    i32.shr_u
-    local.get $22
-    i32.const 7
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $22
     local.get $16
     local.get $20
     i32.add
-    i32.const 0
-    i32.or
     local.set $16
     local.get $28
     local.get $16
     i32.xor
     local.set $28
     local.get $28
-    i32.const 32
     i32.const 8
-    i32.sub
-    i32.shr_u
-    local.get $28
-    i32.const 8
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $28
     local.get $24
     local.get $28
     i32.add
-    i32.const 0
-    i32.or
     local.set $24
     local.get $20
     local.get $24
     i32.xor
     local.set $20
     local.get $20
-    i32.const 32
     i32.const 7
-    i32.sub
-    i32.shr_u
-    local.get $20
-    i32.const 7
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $20
     local.get $3
     local.get $19
     i32.add
-    i32.const 0
-    i32.or
     local.set $3
     local.get $27
     local.get $3
     i32.xor
     local.set $27
     local.get $27
-    i32.const 32
     i32.const 8
-    i32.sub
-    i32.shr_u
-    local.get $27
-    i32.const 8
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $27
     local.get $23
     local.get $27
     i32.add
-    i32.const 0
-    i32.or
     local.set $23
     local.get $19
     local.get $23
     i32.xor
     local.set $19
     local.get $19
-    i32.const 32
     i32.const 7
-    i32.sub
-    i32.shr_u
-    local.get $19
-    i32.const 7
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $19
     local.get $3
     local.get $20
     i32.add
-    i32.const 0
-    i32.or
     local.set $3
     local.get $30
     local.get $3
     i32.xor
     local.set $30
     local.get $30
-    i32.const 32
     i32.const 16
-    i32.sub
-    i32.shr_u
-    local.get $30
-    i32.const 16
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $30
     local.get $25
     local.get $30
     i32.add
-    i32.const 0
-    i32.or
     local.set $25
     local.get $20
     local.get $25
     i32.xor
     local.set $20
     local.get $20
-    i32.const 32
     i32.const 12
-    i32.sub
-    i32.shr_u
-    local.get $20
-    i32.const 12
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $20
     local.get $16
     local.get $21
     i32.add
-    i32.const 0
-    i32.or
     local.set $16
     local.get $27
     local.get $16
     i32.xor
     local.set $27
     local.get $27
-    i32.const 32
     i32.const 16
-    i32.sub
-    i32.shr_u
-    local.get $27
-    i32.const 16
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $27
     local.get $26
     local.get $27
     i32.add
-    i32.const 0
-    i32.or
     local.set $26
     local.get $21
     local.get $26
     i32.xor
     local.set $21
     local.get $21
-    i32.const 32
     i32.const 12
-    i32.sub
-    i32.shr_u
-    local.get $21
-    i32.const 12
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $21
     local.get $17
     local.get $22
     i32.add
-    i32.const 0
-    i32.or
     local.set $17
     local.get $28
     local.get $17
     i32.xor
     local.set $28
     local.get $28
-    i32.const 32
     i32.const 16
-    i32.sub
-    i32.shr_u
-    local.get $28
-    i32.const 16
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $28
     local.get $23
     local.get $28
     i32.add
-    i32.const 0
-    i32.or
     local.set $23
     local.get $22
     local.get $23
     i32.xor
     local.set $22
     local.get $22
-    i32.const 32
     i32.const 12
-    i32.sub
-    i32.shr_u
-    local.get $22
-    i32.const 12
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $22
     local.get $18
     local.get $19
     i32.add
-    i32.const 0
-    i32.or
     local.set $18
     local.get $29
     local.get $18
     i32.xor
     local.set $29
     local.get $29
-    i32.const 32
     i32.const 16
-    i32.sub
-    i32.shr_u
-    local.get $29
-    i32.const 16
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $29
     local.get $24
     local.get $29
     i32.add
-    i32.const 0
-    i32.or
     local.set $24
     local.get $19
     local.get $24
     i32.xor
     local.set $19
     local.get $19
-    i32.const 32
     i32.const 12
-    i32.sub
-    i32.shr_u
-    local.get $19
-    i32.const 12
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $19
     local.get $17
     local.get $22
     i32.add
-    i32.const 0
-    i32.or
     local.set $17
     local.get $28
     local.get $17
     i32.xor
     local.set $28
     local.get $28
-    i32.const 32
     i32.const 8
-    i32.sub
-    i32.shr_u
-    local.get $28
-    i32.const 8
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $28
     local.get $23
     local.get $28
     i32.add
-    i32.const 0
-    i32.or
     local.set $23
     local.get $22
     local.get $23
     i32.xor
     local.set $22
     local.get $22
-    i32.const 32
     i32.const 7
-    i32.sub
-    i32.shr_u
-    local.get $22
-    i32.const 7
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $22
     local.get $18
     local.get $19
     i32.add
-    i32.const 0
-    i32.or
     local.set $18
     local.get $29
     local.get $18
     i32.xor
     local.set $29
     local.get $29
-    i32.const 32
     i32.const 8
-    i32.sub
-    i32.shr_u
-    local.get $29
-    i32.const 8
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $29
     local.get $24
     local.get $29
     i32.add
-    i32.const 0
-    i32.or
     local.set $24
     local.get $19
     local.get $24
     i32.xor
     local.set $19
     local.get $19
-    i32.const 32
     i32.const 7
-    i32.sub
-    i32.shr_u
-    local.get $19
-    i32.const 7
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $19
     local.get $16
     local.get $21
     i32.add
-    i32.const 0
-    i32.or
     local.set $16
     local.get $27
     local.get $16
     i32.xor
     local.set $27
     local.get $27
-    i32.const 32
     i32.const 8
-    i32.sub
-    i32.shr_u
-    local.get $27
-    i32.const 8
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $27
     local.get $26
     local.get $27
     i32.add
-    i32.const 0
-    i32.or
     local.set $26
     local.get $21
     local.get $26
     i32.xor
     local.set $21
     local.get $21
-    i32.const 32
     i32.const 7
-    i32.sub
-    i32.shr_u
-    local.get $21
-    i32.const 7
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $21
     local.get $3
     local.get $20
     i32.add
-    i32.const 0
-    i32.or
     local.set $3
     local.get $30
     local.get $3
     i32.xor
     local.set $30
     local.get $30
-    i32.const 32
     i32.const 8
-    i32.sub
-    i32.shr_u
-    local.get $30
-    i32.const 8
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $30
     local.get $25
     local.get $30
     i32.add
-    i32.const 0
-    i32.or
     local.set $25
     local.get $20
     local.get $25
     i32.xor
     local.set $20
     local.get $20
-    i32.const 32
     i32.const 7
-    i32.sub
-    i32.shr_u
-    local.get $20
-    i32.const 7
-    i32.shl
-    i32.or
+    i32.rotl
     local.set $20
     local.get $31
     i32.const 2

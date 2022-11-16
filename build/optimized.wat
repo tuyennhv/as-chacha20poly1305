@@ -951,24 +951,9 @@
   end
  )
  (func $assembly/util/wipe8 (; 13 ;) (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  loop $for-loop|0
-   local.get $2
-   local.get $1
-   i32.lt_u
-   if
-    local.get $0
-    local.get $2
-    i32.add
-    i32.const 0
-    i32.store8
-    local.get $2
-    i32.const 1
-    i32.add
-    local.set $2
-    br $for-loop|0
-   end
-  end
+  local.get $0
+  local.get $1
+  call $~lib/memory/memory.fill
  )
  (func $assembly/chacha20/doStreamXORUpdate (; 14 ;) (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (param $4 i32) (result i32)
   (local $5 i32)
@@ -3144,26 +3129,11 @@
   global.set $assembly/poly1305/_finished
  )
  (func $assembly/util/wipe16 (; 22 ;) (param $0 i32) (param $1 i32)
-  (local $2 i32)
-  loop $for-loop|0
-   local.get $2
-   local.get $1
-   i32.lt_u
-   if
-    local.get $0
-    local.get $2
-    i32.const 1
-    i32.shl
-    i32.add
-    i32.const 0
-    i32.store16
-    local.get $2
-    i32.const 1
-    i32.add
-    local.set $2
-    br $for-loop|0
-   end
-  end
+  local.get $0
+  local.get $1
+  i32.const 1
+  i32.shl
+  call $~lib/memory/memory.fill
  )
  (func $assembly/poly1305/clean (; 23 ;)
   global.get $assembly/poly1305/_buffer

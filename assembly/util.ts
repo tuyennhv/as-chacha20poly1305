@@ -43,19 +43,9 @@ export function writeUint32LE(value: i32, out: usize, offset: u8 = 0): void {
 }
 
 export function wipe8(array: usize, length: u32): void {
-  // Right now it's similar to array.fill(0). If it turns
-  // out that runtimes optimize this call away, maybe
-  // we can try something else.
-  for (let i: u32 = 0; i < length; i++) {
-    store8(array, i, 0);
-  }
+  memory.fill(array, 0, length * sizeof<u8>());
 }
 
 export function wipe16(array: usize, length: u32): void {
-  // Right now it's similar to array.fill(0). If it turns
-  // out that runtimes optimize this call away, maybe
-  // we can try something else.
-  for (let i: u32 = 0; i < length; i++) {
-    store16(array, i, 0);
-  }
+  memory.fill(array, 0, length * sizeof<u16>());
 }

@@ -6090,24 +6090,6 @@
     i32.add
     local.get $4
     i32.store8
-    local.get $2
-    i32.const 1
-    i32.add
-    local.set $2
-    br $for-loop|0
-   end
-  end
-  local.get $1
-  call $assembly/poly1305/poly1305Update
-  i32.const 0
-  local.set $2
-  loop $for-loop|1
-   local.get $2
-   local.get $1
-   i32.lt_u
-   local.set $3
-   local.get $3
-   if
     global.get $assembly/chacha20/chacha20InputPtr
     local.set $8
     local.get $2
@@ -6130,9 +6112,11 @@
     i32.const 1
     i32.add
     local.set $2
-    br $for-loop|1
+    br $for-loop|0
    end
   end
+  local.get $1
+  call $assembly/poly1305/poly1305Update
   local.get $1
   call $assembly/chacha20/chacha20StreamXORUpdate
   drop

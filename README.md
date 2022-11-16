@@ -1,8 +1,8 @@
 # as-chacha20poly1305
 
-![ES Version](https://github.com/StableLib/stablelib/tree/master/packages/chacha20poly1305)
-
 AssemblyScript implementation of chacha20poly1305, it's 20% - 60% faster compared to stablelib with no memory allocation in the middle.
+
+This was ported from the typescript version https://github.com/StableLib/stablelib/tree/master/packages/chacha20poly1305
 
 ## Usage
 

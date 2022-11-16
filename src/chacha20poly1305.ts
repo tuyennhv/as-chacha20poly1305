@@ -1,4 +1,5 @@
 import {DATA_CHUNK_LENGTH, KEY_LENGTH, NONCE_LENGTH, TAG_LENGTH} from "../common/const";
+import {bytes12, bytes32} from "./types";
 import {UpdateFn, WasmContext} from "./wasm";
 
 export class ChaCha20Poly1305 {
@@ -28,9 +29,12 @@ export class ChaCha20Poly1305 {
     this.wasmDebugArr = new Uint32Array(ctx.memory.buffer, wasmDebugValue, 64);
   }
 
+  /**
+   * Encode function
+   */
   seal(
-    key: Uint8Array,
-    nonce: Uint8Array,
+    key: bytes32,
+    nonce: bytes12,
     plaintext: Uint8Array,
     associatedData?: Uint8Array,
     dst?: Uint8Array
@@ -54,9 +58,12 @@ export class ChaCha20Poly1305 {
     return result;
   }
 
+  /**
+   * Decode function
+   */
   open(
-    key: Uint8Array,
-    nonce: Uint8Array,
+    key: bytes32,
+    nonce: bytes12,
     sealed: Uint8Array,
     associatedData?: Uint8Array,
     dst?: Uint8Array
@@ -82,7 +89,7 @@ export class ChaCha20Poly1305 {
     return isTagValid ? result : null;
   }
 
-  private init(key: Uint8Array, nonce: Uint8Array, ad: Uint8Array = new Uint8Array(0)): void {
+  private init(key: bytes32, nonce: bytes12, ad: Uint8Array = new Uint8Array(0)): void {
     if (key.length != KEY_LENGTH) {
       throw Error(`Invalid chacha20poly1305 key length ${key.length}, expect ${KEY_LENGTH}`);
     }

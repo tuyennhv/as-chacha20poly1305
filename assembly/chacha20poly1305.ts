@@ -136,6 +136,7 @@ function doOpenUpdate(ciphertext: usize, length: u32): void {
   // no need to initialize Poly1305 anymore as we did it in doInit()
   for (let i: u32 = 0; i < length; i++) {
     store8(poly1305InputPtr, i, load8(ciphertext, i));
+    store8(chacha20InputPtr, i, load8(ciphertext, i));
   }
   poly1305Update(length);
 
@@ -143,10 +144,6 @@ function doOpenUpdate(ciphertext: usize, length: u32): void {
   // Decrypt even through we haven't done _authenticate
   // we may waste some streamXOR() call but should be ok for most of the times
   // key and counter are set in doInit
-  // TODO: chain with the above for loop?
-  for (let i: u32 = 0; i < length; i++) {
-    store8(chacha20InputPtr, i, load8(ciphertext, i));
-  }
   chacha20StreamXORUpdate(length);
   // output is set to chacha20Output
 }

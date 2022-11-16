@@ -481,8 +481,7 @@ export function digest(out: usize): void {
   if (_finished) {
     throw new Error("Poly1305 was finished");
   }
-  // TODO: remove this 0 constant
-  finish(out, 0);
+  finish(out);
 }
 
 export function clean(): void {

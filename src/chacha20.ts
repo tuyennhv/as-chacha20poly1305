@@ -1,3 +1,4 @@
+import { bytes16, bytes32 } from "./types";
 import {newInstance} from "./wasm";
 
 const ctx = newInstance();
@@ -13,7 +14,6 @@ const keyArr = new Uint8Array(ctx.memory.buffer, wasmKeyValue, KEY_LENGTH);
 const counterArr = new Uint8Array(ctx.memory.buffer, wasmCounterValue, CHACHA20_COUNTER_LENGTH);
 // const debugArray = new Uint32Array(ctx.memory.buffer, ctx.debug.value, 64);
 
-// TODO: better types for key and nonce
 /**
  * chacha 20 function.
  * @param key a 32 byte Uint8Array
@@ -21,7 +21,7 @@ const counterArr = new Uint8Array(ctx.memory.buffer, wasmCounterValue, CHACHA20_
  * @param src
  * @returns
  */
-export function chacha20StreamXOR(key: Uint8Array, nonce: Uint8Array, src: Uint8Array): Uint8Array {
+export function chacha20StreamXOR(key: bytes32, nonce: bytes16, src: Uint8Array): Uint8Array {
   // We only support 256-bit keys.
   if (key.length != KEY_LENGTH) {
     throw new Error("ChaCha: key size must be 32 bytes, expected " + KEY_LENGTH + " got " + key.length);

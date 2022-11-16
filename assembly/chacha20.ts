@@ -127,7 +127,7 @@ function core(out: usize, input: usize, key: usize): void {
   let x14: i32 = j14;
   let x15: i32 = j15;
 
-  for (let i: i32 = 0; i < ROUNDS; i += 2) {
+  for (let i = 0; i < ROUNDS; i += 2) {
     x0 = x0 + x4;
     x12 ^= x0;
     x12 = rotl(x12, 16);

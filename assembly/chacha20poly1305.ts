@@ -122,7 +122,7 @@ function doInit(key: usize, nonce: usize, associatedData: usize, asDataLength: u
     if (asDataLength % 16 > 0) {
       const paddedLength = 16 - (asDataLength % 16);
       if (paddedLength > 0) {
-        for (let i: i32 = 0; i < paddedLength; i++) {
+        for (let i = 0; i < paddedLength; i++) {
           store8(poly1305InputPtr, i, 0);
         }
         poly1305Update(paddedLength);
@@ -171,7 +171,7 @@ function doDigest(ciphertextLength: u32, asDataLength: u32): void {
   if (ciphertextLength % 16 > 0) {
     const paddedLength = 16 - (ciphertextLength % 16);
     if (paddedLength > 0) {
-      for (let i: i32 = 0; i < paddedLength; i++) {
+      for (let i = 0; i < paddedLength; i++) {
         store8(poly1305InputPtr, i, 0);
       }
       poly1305Update(paddedLength);
